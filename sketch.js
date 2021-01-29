@@ -15,6 +15,7 @@ var score = 0;
 var gameState = "onSling"; 
 
 function preload(){
+  bgImage = loadImage("/sprites/bg.png");
   getBackgroundImage();
 }
 
@@ -23,8 +24,6 @@ function setup() {
   engine = Engine.create();
   world = engine.world;
 
-  bgImage = loadImage("/sprites/bg.png");
-  
   ground = new Ground(400,390,800,20);
   ground2 = new Ground(100,304,240,153); 
   //rectMode(CENTER) is used 
@@ -57,20 +56,19 @@ function setup() {
 }
 
 function draw() {
-  
-  //background(bgImage); 
+
+  imageMode(CORNER);
+  background(bgImage); 
+
   //This is creating multiple images
   //if(bgImage){}
-
-
-  imageMode(CENTER);
-  image(bgImage, width/2, height/2,width,height);
+  //imageMode(CENTER);
+  //image(bgImage, width/2, height/2,width,height);
 
   noStroke();
   textSize(15);
   fill("white");
   text("Score: "+score, width-100, 25);
-
 
   Engine.update(engine);
   
