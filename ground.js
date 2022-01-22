@@ -9,7 +9,7 @@ class Ground {
         World.add(world, this.body);
         this.width = width;
         this.height = height;
-        this.image = loadImage("/sprites/ground.png");
+        this.image = loadImage("./sprites/ground.png");
 
     }
 
