@@ -129,9 +129,9 @@ async function getBackgroundImage(){
   //console.log(hour);
 
   if(hour>=6 && hour<=19){
-    bgImage = loadImage("sprites/bg.png");
+    bgImage = loadImage("./sprites/bg.png");
   }else{
-    bgImage = loadImage("sprites/bg2.jpg");
+    bgImage = loadImage("./sprites/bg2.jpg");
   }
 
 }
