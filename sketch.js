@@ -15,7 +15,7 @@ var score = 0;
 var gameState = "onSling"; 
 
 function preload(){
-  bgImage = loadImage("/sprites/bg.png");
+  bgImage = loadImage("./sprites/bg.png");
   getBackgroundImage();
 }
 
